@@ -1,0 +1,264 @@
+
+
+*{
+	box-sizing: border-box; 
+	margin: 0;
+	padding: 0; 
+}
+
+
+li, a.nav, button{
+	font-family:Abel, verdana, Arial, Geneva, Arial Black; 
+	font-weight: 500; 
+	font-size: 13px; 
+	color: black; 
+	text-decoration: none; 
+}
+
+p{
+	font-family: fantasy;
+}
+
+
+header{
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center; 
+	padding: 30px 2.5%; 
+}
+
+.logo{
+	cursor: pointer;
+	width: 150px; 
+	padding: 10px; 
+	border-radius: 5%; 
+}
+
+.nav__links{
+	list-style: none; 
+}
+
+
+.nav__links li{
+	display: inline-block;
+	padding: 0px 20px; 
+}
+
+.nav_links li a{
+	transition: all 0.3s ease 0s; 
+}
+
+.nav__links li a:hover{
+	color: rgba(141,14,58,1);
+}
+
+.dropdown{
+	position: relative; 
+	display: inline-block; 
+}
+
+.dropdown-content{
+	display: none; 
+	position: absolute; 
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgb(0,0,0,0,2);
+	z-index: 1; 
+}
+
+/* Links inside the dropdown */
+.dropdown-content a{
+	color: black; 
+	padding: 12px 16px;
+	text-decoration: none; 
+	display: block; 
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover {
+	color: white; 
+	color: rgba(141,14,58,1);
+}
+
+
+
+
+button{
+	color: white; 
+	padding: 9px 25px;
+	background-color: rgba(141,14,58,1); 
+	border: none;
+	border-radius: 50px;
+	cursor: pointer; 
+	transition: all 0.3s ease 0s; 
+}
+
+button:hover{
+	background-color: rgba(141,14,58,0.8); 
+}
+
+
+/* FEATURES */
+
+/* HAPPY HOLIDAY GREETINGS */
+.greetings{
+	display: flex;
+	justify-content: center; 
+	background-image: url("assets/snowflake.jpg"); 
+	height: 300px; 
+	padding: 30px 2.5%; 
+}
+
+.greetings h1{
+	color: white;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 6rem; 
+	text-transform: uppercase; 
+	text-align: center; 
+	margin-top: auto; 
+	text-shadow: 0px 0px 10px black; 
+}
+
+
+/* CONTENT */
+.holiday{
+	margin: 15px 5px;
+	display: flex;
+	flex-direction: row; 
+	flex-wrap: wrap; 
+	justify-content: space-evenly; 
+	align-items: flex-start; 
+}
+.holiday figure{
+	margin: auto; 
+	text-align: center;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+	font-size: 150%; 
+	width: 200px;
+}
+
+.holiday figure img {
+	border-radius: 50%; 
+	border: 1px solid white; 
+	box-shadow: gray 0 0 10px; 
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+.holiday div{
+	margin: 5px; 
+	max-width: 32%;
+	display: flex;
+	flex-direction: column; 
+	
+}
+
+.holiday div h1{
+	text-align: center; 
+}
+
+.holiday div ul{
+	margin-left: 10px; 
+	list-style-type: square;
+	max-width: 300px;
+}
+
+.holiday div ul li {
+	font-weight: lighter; 
+}
+
+.holiday-food{
+	align-self: center; 
+}
+
+.btn-menu{
+	margin: 10px; 
+	width: 200px; 
+}
+
+/* weekly deals  */
+
+.weekly{
+	padding: 10px; 
+	margin: auto; 
+
+}
+
+.weekly p{
+	text-align: center; 
+	margin: 5px; 
+	padding: 5px; 
+	border: 1px dotted gray;
+	border-radius: 10px;  
+}
+
+.btn-barmenu{
+	margin: 0px 5px; 
+}
+
+/* FOOTER */
+
+footer{
+	margin-top: 20px; 
+	background: black;
+	padding: 20px 20px;  
+	display: flex;
+	flex-direction: row; 
+	justify-content: space-evenly;  
+}
+
+#foot-disclaimer{
+	font-family: Verdana, Geneva, Tahoma, sans-serif; 
+	font-size: 12px; 
+	color: gray; 
+}
+
+/* RESPONSIVE RULE */
+@media screen and (max-width:700px){
+	.holiday div{
+		max-width: 50%;
+	}
+	.greetings h1{
+		font-size: 3rem;  
+	}
+
+	.greetings{
+		height: 200px;
+	}
+
+	.holiday div ul{
+		margin-left: 0px; 
+	}
+
+	.btn-menu{
+		margin: 10px ;
+		width: 100px;  
+	}
+
+	.nav__links{
+		visibility:hidden; 
+	}
+
+	footer{
+		flex-direction: column; 
+	}
+
+	.btn-footer{
+		margin: 10px; 
+	}
+
+	.weekly{
+		width: 60%;
+		padding: 10px; 
+		font-size: 13px; 
+	}
+
+}
+
